@@ -283,9 +283,9 @@
         android:textAlignment="gravity"
         android:textSize="50dp"
         android:id="@+id/text_total_m"
-        android:layout_below="@+id/btn_1_6"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_above="@+id/text_rsv_m"
+        android:layout_alignLeft="@+id/text_rsv_m"
+        android:layout_alignStart="@+id/text_rsv_m" />
 
     <Button
         android:layout_width="wrap_content"
@@ -315,9 +315,9 @@
         android:textAlignment="gravity"
         android:textSize="50dp"
         android:id="@+id/text_rsv_m"
-        android:layout_below="@+id/btn_cash"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:layout_alignBottom="@+id/btn_cash"
+        android:layout_alignLeft="@+id/text_rtn_m"
+        android:layout_alignStart="@+id/text_rtn_m" />
 
     <TextView
         android:layout_width="wrap_content"
@@ -326,49 +326,44 @@
         android:textAlignment="gravity"
         android:textSize="50dp"
         android:id="@+id/text_rtn_m"
-        android:layout_alignTop="@+id/text_rsv_m"
-        android:layout_toRightOf="@+id/text_rsv_m"
-        android:layout_toEndOf="@+id/text_rsv_m"
-        android:layout_marginLeft="54dp"
-        android:layout_marginStart="54dp" />
+        android:layout_below="@+id/text_rsv_m"
+        android:layout_toLeftOf="@+id/show_rtn_m"
+        android:layout_toStartOf="@+id/show_rtn_m" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/show_ttl_m"
-        android:layout_alignBottom="@+id/text_total_m"
-        android:layout_toRightOf="@+id/text_total_m"
-        android:layout_alignRight="@+id/text_rtn_m"
-        android:layout_alignEnd="@+id/text_rtn_m" />
+        android:enabled="false"
+        android:layout_alignBottom="@+id/btn_1_6"
+        android:layout_alignLeft="@+id/show_rsv_m"
+        android:layout_alignStart="@+id/show_rsv_m"
+        android:layout_alignRight="@+id/show_rsv_m"
+        android:layout_alignEnd="@+id/show_rsv_m" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/show_rsv_m"
-        android:layout_below="@+id/text_rsv_m"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_toLeftOf="@+id/text_rtn_m"
-        android:layout_toStartOf="@+id/text_rtn_m" />
+        android:layout_alignBottom="@+id/text_rsv_m"
+        android:layout_alignTop="@+id/text_rsv_m"
+        android:layout_alignLeft="@+id/show_rtn_m"
+        android:layout_alignStart="@+id/show_rtn_m"
+        android:layout_alignRight="@+id/show_rtn_m"
+        android:layout_alignEnd="@+id/show_rtn_m"
+        android:editable="true" />
 
     <EditText
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/show_rtn_m"
-        android:layout_below="@+id/text_rtn_m"
-        android:layout_alignLeft="@+id/text_rtn_m"
-        android:layout_alignStart="@+id/text_rtn_m"
-        android:layout_alignRight="@+id/text_rtn_m"
-        android:layout_alignEnd="@+id/text_rtn_m" />
+        android:layout_alignBottom="@+id/text_rtn_m"
+        android:layout_alignTop="@+id/text_rtn_m"
+        android:layout_toRightOf="@+id/text_selec"
+        android:layout_alignRight="@+id/listview1"
+        android:layout_alignEnd="@+id/listview1"
+        android:editable="true" />
 
-    <TextClock
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/textClock"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentRight="true"
-        android:layout_alignParentEnd="true"
-        android:textSize="40sp" />
 
     <Button
         android:layout_width="wrap_content"
@@ -376,8 +371,7 @@
         android:text="ICE"
         android:id="@+id/btn_ice"
         android:textSize="60sp"
-        android:layout_alignBaseline="@+id/text_rtn_m"
-        android:layout_alignBottom="@+id/text_rtn_m"
+        android:layout_alignTop="@+id/show_rsv_m"
         android:layout_alignLeft="@+id/btn_1_6"
         android:layout_alignStart="@+id/btn_1_6" />
 
