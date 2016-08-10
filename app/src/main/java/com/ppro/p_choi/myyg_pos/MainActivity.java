@@ -79,14 +79,14 @@ public class MainActivity extends AppCompatActivity {
                 Drawable iconDrawble = item.getIcon();
             }
         });//헷갈리기 쉬운부분
-
+        m_adapter.addItem(ContextCompat.getDrawable(this, R.mipmap.ic_launcher),"Box","Account box Black");
         Button.OnClickListener listener = new Button.OnClickListener(){
             public void onClick(View v){
                 switch (v.getId()){
                     case R.id.btn_1_1:
                         System.out.println("1_1 눌림");
                         //ListView에 Item추가
-                        m_adapter.addItem(ContextCompat.getDrawable(this, R.drawable.),"Box","Account box Black");
+                        //m_adapter.addItem(ContextCompat.getDrawable(this, R.mipmap.ic_launcher),"Box","Account box Black");
                         //총계금액에 추가
                         m_total_int += getPrice(v.getId());
                         break;
